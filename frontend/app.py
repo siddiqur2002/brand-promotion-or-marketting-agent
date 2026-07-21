@@ -12,7 +12,7 @@ st.set_page_config(
 )
 
 # Backend URL Configuration (Supports Docker internal network & Environment Vars)
-BACKEND_URL = os.getenv("BACKEND_URL", "http://localhost:8000/api/v1/campaigns")
+BACKEND_URL = os.getenv("BACKEND_URL", "https://brand-promotion-or-marketting-agent.onrender.com/api/v1/campaigns")
 
 # --- 2. Streamlit Modern Custom Styling ---
 st.markdown("""
