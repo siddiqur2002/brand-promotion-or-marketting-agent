@@ -1,0 +1,25 @@
+
+services:
+  web:
+    build: .
+    # uv run স্বয়ংক্রিয়ভাবে .venv হ্যান্ডেল করবে
+    command: uv run uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    volumes:
+      - .:/workspace
+
+  worker:
+    build: .
+    # ব্যাকগ্রাউন্ড Celery টাস্ক রানার
+    command: uv run celery -A app.workers.celery_app.celery worker --loglevel=info
+    env_file:
+      - .env
+    volumes:
+      - .:/workspace
+    depends_on:
+      - web
+
+

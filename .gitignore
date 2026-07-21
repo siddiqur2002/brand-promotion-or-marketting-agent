@@ -1,0 +1,91 @@
+# ==========================================
+# 1. Environment & Secret Files (VERY IMPORTANT)
+# ==========================================
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# ==========================================
+# 2. Python / Backend Ignored Files
+# ==========================================
+# Virtual Environments
+venv/
+.venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Celery
+celerybeat-schedule
+celerybeat.pid
+
+# Databases & Local Logs
+*.sqlite3
+*.db
+*.log
+
+# pytest / coverage results
+.pytest_cache/
+.coverage
+htmlcov/
+
+# ==========================================
+# 3. Node.js / Frontend Ignored Files
+# ==========================================
+# Dependencies
+node_modules/
+/.pnp
+.pnp.js
+
+# Build / Production Output
+dist/
+build/
+.next/
+out/
+
+# Debug Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Next.js / React Cache
+.swc/
+.turbo/
+
+# ==========================================
+# 4. OS & IDE Specific Files
+# ==========================================
+# macOS
+.DS_Store
+.AppleDouble
+.LSSharedFileList
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# VS Code & JetBrains IDE
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
